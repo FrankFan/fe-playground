@@ -1,0 +1,378 @@
+
+.Home-content {
+  height: 100%; }
+  .Home-content .animated {
+    animation-duration: 1s;
+    animation-fill-mode: both; }
+
+@keyframes flipInX {
+  from {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0; }
+  40% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    animation-timing-function: ease-in; }
+  60% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1; }
+  80% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg); }
+  to {
+    transform: perspective(400px); } }
+  .Home-content .flipInX {
+    backface-visibility: visible !important;
+    animation-name: flipInX; }
+
+.float {
+  color: gray; }
+  .float .example1 {
+    border: 1px dashed forestgreen;
+    margin-bottom: 30px; }
+    .float .example1 .div1 {
+      background-color: aquamarine;
+      width: 200px;
+      height: 50px; }
+    .float .example1 .div2 {
+      background-color: blueviolet;
+      width: 150px;
+      height: 150px;
+      float: right; }
+    .float .example1 .div3 {
+      background-color: chocolate;
+      width: 250px;
+      height: 50px; }
+    .float .example1 .div4 {
+      background-color: yellow;
+      width: 450px;
+      height: 50px; }
+  .float .play {
+    display: none; }
+    .float .play .div1 {
+      background-color: aquamarine;
+      width: 200px;
+      height: 50px; }
+    .float .play .div2 {
+      background-color: blueviolet;
+      width: 150px;
+      height: 50px;
+      float: left; }
+    .float .play .div3 {
+      background-color: chocolate;
+      width: 250px;
+      height: 50px;
+      float: left; }
+    .float .play .div4 {
+      background-color: yellowgreen;
+      width: 450px;
+      height: 50px;
+      float: left; }
+    .float .play .div5 {
+      background-color: red;
+      width: 850px;
+      height: 50px; }
+  .float .clearfix::after {
+    content: '';
+    clear: both;
+    display: block; }
+  .float .float2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid saddlebrown; }
+    .float .float2 .surround img {
+      float: left; }
+  .float .example {
+    border: 1px solid fuchsia;
+    width: 200px;
+    margin-bottom: 50px; }
+    .float .example .father img {
+      float: left; }
+    .float .example .animal::first-line {
+      background: red;
+      color: white; }
+  .float .w3c-example {
+    border: 1px solid #ccc; }
+    .float .w3c-example h2 {
+      word-break: break-all; }
+    .float .w3c-example div {
+      width: 100px;
+      height: 100px;
+      border: 1px dashed #fcc; }
+      .float .w3c-example div:nth-child(1) {
+        float: left;
+        color: red; }
+  .float .w3c-example2 {
+    border: 1px solid #ccc; }
+    .float .w3c-example2 h2 {
+      word-break: break-all; }
+    .float .w3c-example2 div {
+      width: 100px;
+      height: 100px;
+      border: 1px dashed #fcc;
+      float: left;
+      background: antiquewhite; }
+    .float .w3c-example2 p {
+      margin: 10px 0 0 0;
+      padding: 10px;
+      background: #ccc; }
+      .float .w3c-example2 p:last-child {
+        margin-top: 50px;
+        clear: both; }
+  .float .w3c-example3 {
+    margin-top: 20px;
+    border: 1px solid #ccc; }
+    .float .w3c-example3 .news {
+      border: 1px dashed black;
+      background-color: gray;
+      color: white; }
+      .float .w3c-example3 .news img {
+        float: left; }
+      .float .w3c-example3 .news p {
+        float: right; }
+    .float .w3c-example3 .clearfix::after {
+      content: "";
+      display: table;
+      clear: both; }
+
+.bfc {
+  width: 300px;
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px; }
+  .bfc .aside {
+    width: 100px;
+    height: 150px;
+    line-height: 150px;
+    background: #f66;
+    float: left; }
+  .bfc .main {
+    height: 200px;
+    line-height: 200px;
+    background: #fcc;
+    overflow: hidden; }
+
+.clear-float {
+  border: 5px solid #fcc;
+  width: 300px;
+  overflow: hidden; }
+  .clear-float .child {
+    border: 5px solid #f66;
+    width: 100px;
+    height: 100px;
+    float: left; }
+
+.margin-collapse {
+  border: 2px solid greenyellow; }
+  .margin-collapse .wrap {
+    overflow: hidden; }
+  .margin-collapse p {
+    color: #f55;
+    background: #fcc;
+    width: 200px;
+    line-height: 100px;
+    text-align: center;
+    margin: 100px; }
+
+.only-abs div {
+  width: 100px;
+  height: 100px;
+  border: 1px solid fuchsia; }
+  .only-abs div:nth-child(2) {
+    position: absolute;
+    background: #fcc; }
+  .only-abs div:nth-child(3) {
+    background: #ccc; }
+
+.center-content {
+  background: #ececec; }
+  .center-content h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 60px;
+    padding: 30px;
+    color: #1a0dab; }
+  .center-content .wrap {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    border: 1px solid saddlebrown;
+    margin-bottom: 10px; }
+
+.center1 {
+  width: 400px;
+  height: 400px;
+  line-height: 400px;
+  background: #bcc;
+  opacity: .7;
+  color: #fff;
+  font-size: 30px;
+  text-align: center; }
+
+.center2 {
+  width: 400px;
+  height: 400px;
+  color: #fff;
+  font-size: 30px;
+  background-color: aquamarine;
+  line-height: 400px;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -200px;
+  margin-top: -200px; }
+
+.center3 {
+  width: 50%;
+  height: 50%;
+  background-color: burlywood;
+  line-height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  .center3 > p {
+    color: #fff;
+    font-size: 30px;
+    text-align: center; }
+
+.center4 {
+  margin: 0 auto;
+  width: 400px;
+  height: 400px;
+  background-color: darkgreen;
+  opacity: .7; }
+  .center4 .content-box > p {
+    color: #fff;
+    font-size: 30px; }
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.transform-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.absolute-center {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+.position-content {
+  height: 5000px; }
+  .position-content .normal {
+    height: 100px;
+    width: 100px;
+    background: #ccc; }
+  .position-content .offset {
+    position: relative;
+    top: 20px;
+    left: 80px;
+    background: tan;
+    width: 300px;
+    height: 150px; }
+  .position-content section {
+    position: relative; }
+  .position-content .section-offset2 .offset2 {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    z-index: 1;
+    width: 100px;
+    height: 100px;
+    background: #fcc; }
+  .position-content .fixed {
+    height: 100px;
+    width: 100px;
+    background: tan;
+    position: fixed;
+    bottom: 20px;
+    right: 20px; }
+  .position-content .sticky {
+    height: 50px;
+    background: thistle;
+    position: sticky;
+    top: 0; }
+
+.layout-content {
+  height: 100%; }
+  .layout-content .wrap {
+    height: 100%; }
+    .layout-content .wrap .square {
+      width: 50%;
+      height: 50%;
+      background: #fcc;
+      text-align: center;
+      font-size: 20px; }
+
+.Square-content {
+  background-color: #ccc; }
+  .Square-content .square {
+    position: relative; }
+    .Square-content .square .text {
+      height: 0;
+      text-align: center;
+      color: azure;
+      font-size: 20px; }
+    .Square-content .square::after {
+      content: '';
+      display: block;
+      padding-top: 100%;
+      background: #fcc; }
+  .Square-content .vw {
+    overflow: hidden; }
+    .Square-content .vw .content .box {
+      height: 30vw;
+      float: left;
+      width: 30%;
+      margin: 0 1%; }
+      .Square-content .vw .content .box:nth-child(1) {
+        background: cadetblue; }
+      .Square-content .vw .content .box:nth-child(2) {
+        background: blue; }
+      .Square-content .vw .content .box:nth-child(3) {
+        background: #fcc; }
+
+html, body, #root {
+  height: 100%; }
+
+body, p, ul, li, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0; }
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.transform-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.absolute-center {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+#root > section {
+  height: 100%; }
+  #root > section .sidebar {
+    background-color: #f8ca00;
+    width: 180px;
+    height: 100%;
+    position: fixed; }
+  #root > section main {
+    margin-left: 200px; }
+
