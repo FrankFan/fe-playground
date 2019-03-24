@@ -7,7 +7,6 @@ export default class Analyzer extends React.Component {
   }
 
   onClick = () => {
-    debugger;
     var iframe = window.frames['myFrame'];
     iframe.document.getElementById('index-form');
     console.log(a);

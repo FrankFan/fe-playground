@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const WebpackBar = require('webpackbar');
 
 const htmlMinifyConfig = {
   collapseWhitespace: true,
@@ -12,6 +13,13 @@ module.exports = (noting, argv) => {
   const isProduction = argv.mode === 'production';
 
   let plugins = [
+    new HtmlWebpackPlugin({
+      title: 'Home',
+      filename: 'index.html',
+      template: `${__dirname}/template.html`,
+      chunks: ['home', 'common', 'runtime'],
+      minify: isProduction ? htmlMinifyConfig : {},
+    }),
     new HtmlWebpackPlugin({
       title: 'css基础',
       filename: 'page-css.html',
@@ -37,6 +45,7 @@ module.exports = (noting, argv) => {
     }));
   } else {
     // dev plugins here
+    plugins.push(new WebpackBar());
   }
 
   return {
@@ -44,6 +53,7 @@ module.exports = (noting, argv) => {
     mode: argv.mode,
     devtool: isProduction ? '' : 'cheap-module-eval-source-map',
     entry: {
+      'home': './src/pages/Home/index.js',
       'page-css': './src/pages/CSS/index.js',
       'page-js': './src/pages/JS/index.js',
     },
@@ -91,7 +101,7 @@ module.exports = (noting, argv) => {
       port: 9000,
       hot: true,
       open: true,
-      openPage: 'page-css.html',
+      openPage: 'index.html',
     },
     optimization: {
       splitChunks: {
