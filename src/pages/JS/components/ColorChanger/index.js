@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.scss';
 
-export default class Basic extends React.Component {
+export default class ColorChanger extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -44,7 +44,7 @@ export default class Basic extends React.Component {
 
   render() {
     return (
-      <div className="basic">
+      <div className="color">
         <div className="question">
           <h1 onClick={this.onH1Click}>在一个空白页面上创建100个元素，给每个元素一个独立的背景色，点击每个元素时，被点元素背景色保持不变，其他元素的背景色必须全部发生变化，且这100个元素的背景色不能重复</h1>
           <div className="content">
