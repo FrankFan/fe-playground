@@ -31,6 +31,12 @@ const arrTarget = [0, 1, 2, 4, 5, 6];
 const arrTarget2 = [0, 2, 6];
 const url = 'https://www.baidu.com/s?wd=s&rsv_spt=1&rsv_iqid=0xd6450b3b000d69f0&issp=1&f=3&rsv_bp=0&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=1&rsv_sug3=1&rsv_sug1=1&rsv_sug7=100&rsv_sug2=0&prefixsug=s&rsp=2&inputT=117&rsv_sug4=117';
 
+// sort
+import {
+  bubbleSort,
+  quickSort,
+} from '../src/utils/sort';
+
 describe('Array 数组操作', function() {
   describe('1.数组去重', function() {
 
@@ -132,3 +138,23 @@ describe('utility', () => {
     });
   });
 });
+
+describe('test sort method', () => {
+  describe('1. bubble sort', () => {
+    it('test', () => {
+      const arr = [12, 35, 99, 18, 76];
+      const result = bubbleSort(arr);
+      expect(result).to.eql([99, 76, 35, 18, 12]);
+    })
+  });
+
+  describe('2. quick sort', () => {
+    it('test', () => {
+      const arr = [6, 1, 2, 7, 9, 3, 4, 5, 10, 8];
+      const result = quickSort(arr);
+      console.log(result);
+
+      // expect(result).to.eql([99, 76, 35, 18, 12]);
+    })
+  });
+})
