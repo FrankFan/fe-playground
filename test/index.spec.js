@@ -151,10 +151,11 @@ describe('test sort method', () => {
   describe('2. quick sort', () => {
     it('test', () => {
       const arr = [6, 1, 2, 7, 9, 3, 4, 5, 10, 8];
-      const result = quickSort(arr);
+      console.log(arr);
+      const result = quickSort(arr, 0, arr.length - 1);
       console.log(result);
 
-      // expect(result).to.eql([99, 76, 35, 18, 12]);
+      expect(result).to.eql([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
     })
   });
 })
