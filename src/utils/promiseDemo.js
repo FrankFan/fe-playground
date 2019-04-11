@@ -71,17 +71,17 @@ var data = [{
   children: [{
     id: 101,
     name: '浦东',
-  },{
+  }, {
     id: 102,
     name: '长宁',
   }]
-},{
+}, {
   id: 200,
   name: '杭州',
   children: [{
     id: 201,
     name: '西溪',
-  },{
+  }, {
     id: 202,
     name: '西湖',
   }]
@@ -162,25 +162,25 @@ function deepSearch2(tree) {
 function testEventLoop() {
   async function async1() {
     console.log("async1 start");
-    await  async2();
+    await async2();
     console.log("async1 end");
 
-}
-async  function async2() {
-   console.log( 'async2');
-}
-console.log("script start");
-setTimeout(function () {
+  }
+  async function async2() {
+    console.log('async2');
+  }
+  console.log("script start");
+  setTimeout(function () {
     console.log("settimeout");
-},0);
-async1();
-new Promise(function (a) {
+  }, 0);
+  async1();
+  new Promise(function (a) {
     console.log("promise1");
     a();
-}).then(function () {
+  }).then(function () {
     console.log("promise2");
-});
-console.log('script end');
+  });
+  console.log('script end');
 
 }
 

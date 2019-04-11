@@ -50,7 +50,7 @@ function partition(arr, startIndex, endIndex) {
       right--;
     }
 
-    // 控制right指针比较并左移
+    // 控制left指针比较并右移
     while (left < right && arr[left] <= pivot) {
       left++;
     }
