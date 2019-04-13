@@ -1,16 +1,28 @@
 function jsonp(url, timeout, callback) {
   const funcName = generateJsonpCallback();
   window[funcName] = callback;
+
+  // 动态创建script标签
+  createScriptTag(url, funcName);
+
+  setTimeout(() => {
+    removeScript(funcName);
+    removeFunc(funcName);
+  }, timeout);
+}
+
+function createScriptTag(url, funcName) {
   const script = document.createElement('script');
   script.src = `${url}?callback=${funcName}`;
   script.id = funcName;
   script.type = 'text/javascript';
   document.body.appendChild(script);
-  console.log(`timeout default is ${timeout}`);
-  setTimeout(() => {
+
+  // error handling
+  script.onerror = () => {
     removeScript(funcName);
     removeFunc(funcName);
-  }, timeout)
+  }
 }
 
 function generateJsonpCallback() {
