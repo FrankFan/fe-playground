@@ -1,5 +1,5 @@
-import React from "react";
-import { HashRouter, Route, Switch } from "react-router-dom";
+import React from 'react';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 
 import NoMatch from '../../common/components/NoMatch';
 import ColorChanger from './components/ColorChanger/';
@@ -11,7 +11,7 @@ const AppRouter = () => (
       <Route path="/" exact component={BasicKnowledge} />
       <Route path="/color" exact component={ColorChanger} />
       <Route path="/bk" exact component={BasicKnowledge} />
-      <Route component={NoMatch}/>
+      <Route component={NoMatch} />
     </Switch>
   </HashRouter>
 );

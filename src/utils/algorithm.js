@@ -1,6 +1,4 @@
-import {
-  unique,
-} from './arrayUtil';
+import { unique } from './arrayUtil';
 
 /**
  * 求一个字符串中出现次数最多的字符
@@ -12,7 +10,7 @@ export function getMaxDuplicate(str) {
   if (!str) {
     return new Error('params required');
   }
-  if(str.length === 1) {
+  if (str.length === 1) {
     return str;
   }
   let obj = {};
@@ -43,7 +41,13 @@ export function hiuwen(str) {
   if (!str) {
     return new Error('params required');
   }
-  return str === str.split('').reverse().join('');
+  return (
+    str ===
+    str
+      .split('')
+      .reverse()
+      .join('')
+  );
 }
 
 /**
@@ -71,7 +75,9 @@ export function fibonacci(n) {
 export function getMaxDiff(arr) {
   let result = 0;
   let uniqueArr = unique(arr);
-  var sortedArr = uniqueArr.sort((a, b) => { return b -a });
+  var sortedArr = uniqueArr.sort((a, b) => {
+    return b - a;
+  });
   result = sortedArr[0] - sortedArr[sortedArr.length - 1];
   return result;
 }
@@ -103,7 +109,7 @@ function huiwen(str) {
   const length = arr.length;
   let i = 0;
   let j = length - 1;
-  for(; i <= j; i++, j--) {
+  for (; i <= j; i++, j--) {
     if (arr[i] !== arr[j]) {
       flag = false;
     }
@@ -115,7 +121,6 @@ function huiwen(str) {
 // console.log(huiwen('noon'));
 // console.log(huiwen('good'));
 // console.log(huiwen('牛奶奶牛'));
-
 
 /**
  * https://juejin.im/entry/5a3754ad51882512b72fc1f2

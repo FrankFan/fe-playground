@@ -1,5 +1,5 @@
-import React from "react";
-import { HashRouter, Route, Switch } from "react-router-dom";
+import React from 'react';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 
 import NoMatch from '../../common/components/NoMatch';
 import Sidebar from './components/sidebar/';
@@ -8,7 +8,7 @@ import BFCPage from './components/BFC/';
 import CenterPage from './components/center/';
 import PositionPage from './components/position/';
 import LayoutPage from './components/layout/';
-import ResponsiveSquarePage from "./components/square";
+import ResponsiveSquarePage from './components/square';
 
 const AppRouter = () => (
   <HashRouter>
@@ -23,7 +23,7 @@ const AppRouter = () => (
           <Route path="/position" component={PositionPage} />
           <Route path="/layout" component={LayoutPage} />
           <Route path="/square" component={ResponsiveSquarePage} />
-          <Route component={NoMatch}/>
+          <Route component={NoMatch} />
         </Switch>
       </main>
     </section>

@@ -1,8 +1,19 @@
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
 }
 
-body, p, ul, li, h1, h2, h3, h4, h5, h6 {
+body,
+p,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   padding: 0;
 }
@@ -37,7 +48,6 @@ body, p, ul, li, h1, h2, h3, h4, h5, h6 {
       width: 180px;
       height: 100%;
       position: fixed;
-
     }
     main {
       margin-left: 200px;

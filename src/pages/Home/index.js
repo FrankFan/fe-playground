@@ -5,9 +5,6 @@ import App from './router';
 import 'normalize.css';
 import '@/common/common.scss';
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+ReactDOM.render(<App />, document.getElementById('root'));
 
 console.log('Hi');

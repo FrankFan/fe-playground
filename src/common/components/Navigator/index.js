@@ -10,12 +10,24 @@ class Navigator extends React.Component {
           <div className="menu">
             <h2 className="menu-title">CSS</h2>
             <ul className="menu-dropdown">
-              <li><Link to="/float">float</Link></li>
-              <li><Link to="/position">position</Link></li>
-              <li><Link to="/center">center</Link></li>
-              <li><Link to="/bfc">bfc</Link></li>
-              <li><Link to="/layout">layout</Link></li>
-              <li><Link to="/square">square</Link></li>
+              <li>
+                <Link to="/float">float</Link>
+              </li>
+              <li>
+                <Link to="/position">position</Link>
+              </li>
+              <li>
+                <Link to="/center">center</Link>
+              </li>
+              <li>
+                <Link to="/bfc">bfc</Link>
+              </li>
+              <li>
+                <Link to="/layout">layout</Link>
+              </li>
+              <li>
+                <Link to="/square">square</Link>
+              </li>
             </ul>
           </div>
         </li>

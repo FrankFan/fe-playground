@@ -7,9 +7,9 @@
  */
 export function bubbleSort(arr) {
   const length = arr.length;
-  for(let i = 0; i <= length - 1; i++) {
-    for(let j = 0; j <= length -1; j++) {
-      if(arr[j] < arr[j + 1]) {
+  for (let i = 0; i <= length - 1; i++) {
+    for (let j = 0; j <= length - 1; j++) {
+      if (arr[j] < arr[j + 1]) {
         const tmp = arr[j];
         arr[j] = arr[j + 1];
         arr[j + 1] = tmp;
@@ -43,7 +43,7 @@ function partition(arr, startIndex, endIndex) {
   // 取第一个位置的元素作为基准元素
   const pivot = arr[startIndex];
   let left = startIndex;
-  let right  = endIndex;
+  let right = endIndex;
   while (left !== right) {
     // 控制right指针比较并左移
     while (left < right && arr[right] > pivot) {

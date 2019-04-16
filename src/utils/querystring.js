@@ -11,7 +11,6 @@
  *
  */
 
-
 /**
  * parse query string
  * @param {string} name query name
@@ -23,13 +22,11 @@ export function parse(url) {
   const reg = /[?&]([^=&#]+)=([^&#]*)/g;
   let queries = url.match(reg);
   if (queries) {
-    for(const i in queries) {
+    for (const i in queries) {
       const query = queries[i].split('=');
       const key = query[0].substr(1);
       const value = query[1];
-      queryObj[key]
-        ? queryObj[key] = [].concat(queryObj[key], value)
-        : queryObj[key] = value;
+      queryObj[key] ? (queryObj[key] = [].concat(queryObj[key], value)) : (queryObj[key] = value);
     }
   }
   return queryObj;
@@ -65,7 +62,7 @@ export function getQueryByName2(url, name) {
  */
 export function getQueryByName3(url, name) {
   let queryObj = {};
-  const qsStr = (url.split('?') && url.split('?').length > 1) ? url.split('?')[1] : '';
+  const qsStr = url.split('?') && url.split('?').length > 1 ? url.split('?')[1] : '';
   const pairs = qsStr.length > 0 ? qsStr.split('&') : [];
   for (let i = 0; i < pairs.length; i++) {
     const item = pairs[i].split('=');
@@ -86,5 +83,3 @@ export function parseUrl(url) {
     // protocal: a.protocol.
   };
 }
-
-

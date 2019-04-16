@@ -11,7 +11,7 @@ var makePubSub = function() {
     // extract the first event name
     var ev = args.shift();
 
-    if(!callbacks[ev]) return;
+    if (!callbacks[ev]) return;
     var list = callbacks[ev];
 
     for (var i = 0; i < list.length; i++) {
@@ -33,7 +33,7 @@ var makePubSub = function() {
   return {
     pub: publish,
     sub: subscribe,
-  }
+  };
 };
 
 var event = makePubSub();

@@ -11,8 +11,12 @@ export default class HomePage extends React.Component {
       <div className="HomePage">
         <h1>FE Playground</h1>
         <ul>
-          <li><a href="/page-js.html">JavaScript</a></li>
-          <li><a href="/page-css.html">CSS</a></li>
+          <li>
+            <a href="/page-js.html">JavaScript</a>
+          </li>
+          <li>
+            <a href="/page-css.html">CSS</a>
+          </li>
         </ul>
       </div>
     );

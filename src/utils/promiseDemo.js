@@ -1,5 +1,3 @@
-
-
 // https://github.com/nodejh/nodejh.github.io/issues/23
 // 校验 promise.all
 
@@ -21,7 +19,6 @@
 //   })
 // }
 
-
 function testRace() {
   Promise.race([p1, p2, p3])
     .then(values => {
@@ -34,7 +31,6 @@ function testRace() {
 
 // testAll(); // 2
 // testRace();
-
 
 // testAllCatch()
 
@@ -60,33 +56,39 @@ function testRace() {
 //     });
 // }
 
-
-
 // https://blog.csdn.net/chaos_hf/article/details/80150911
 // https://www.jianshu.com/p/b4d8085e84bd
 
-var data = [{
-  id: 100,
-  name: '上海',
-  children: [{
-    id: 101,
-    name: '浦东',
-  }, {
-    id: 102,
-    name: '长宁',
-  }]
-}, {
-  id: 200,
-  name: '杭州',
-  children: [{
-    id: 201,
-    name: '西溪',
-  }, {
-    id: 202,
-    name: '西湖',
-  }]
-}]
-
+var data = [
+  {
+    id: 100,
+    name: '上海',
+    children: [
+      {
+        id: 101,
+        name: '浦东',
+      },
+      {
+        id: 102,
+        name: '长宁',
+      },
+    ],
+  },
+  {
+    id: 200,
+    name: '杭州',
+    children: [
+      {
+        id: 201,
+        name: '西溪',
+      },
+      {
+        id: 202,
+        name: '西湖',
+      },
+    ],
+  },
+];
 
 function find(data, id) {
   data.forEach(item => {
@@ -97,8 +99,8 @@ function find(data, id) {
       if (item2.id === id) {
         return item2.name;
       }
-    })
-  })
+    });
+  });
 }
 
 // var a = find(data, 202);
@@ -138,7 +140,6 @@ function deepSearch2(tree) {
 // deepSearch(data);
 // deepSearch2(data);
 
-
 // console.log('script start');
 
 // setTimeout(function() {
@@ -156,32 +157,27 @@ function deepSearch2(tree) {
 
 // console.log('script end');
 
-
-
-
 function testEventLoop() {
   async function async1() {
-    console.log("async1 start");
+    console.log('async1 start');
     await async2();
-    console.log("async1 end");
-
+    console.log('async1 end');
   }
   async function async2() {
     console.log('async2');
   }
-  console.log("script start");
-  setTimeout(function () {
-    console.log("settimeout");
+  console.log('script start');
+  setTimeout(function() {
+    console.log('settimeout');
   }, 0);
   async1();
-  new Promise(function (a) {
-    console.log("promise1");
+  new Promise(function(a) {
+    console.log('promise1');
     a();
-  }).then(function () {
-    console.log("promise2");
+  }).then(function() {
+    console.log('promise2');
   });
   console.log('script end');
-
 }
 
 testEventLoop();

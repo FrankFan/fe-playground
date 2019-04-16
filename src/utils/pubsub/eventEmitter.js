@@ -1,19 +1,18 @@
 // Polyfill EventEmitter
 // https://gist.github.com/mudge/5830382
 
-
-var EventEmitter = function () {
+var EventEmitter = function() {
   this.events = {};
-}
+};
 
-EventEmitter.prototype.on = function (event, listener) {
+EventEmitter.prototype.on = function(event, listener) {
   if (typeof this.events[event] != 'object') {
     this.events[event] = [];
   }
   this.events[event].push(listener);
 };
 
-EventEmitter.prototype.off = function (event, listener) {
+EventEmitter.prototype.off = function(event, listener) {
   var idx;
 
   if (typeof this.events[event] === 'object') {
@@ -24,7 +23,7 @@ EventEmitter.prototype.off = function (event, listener) {
   }
 };
 
-EventEmitter.prototype.emit = function (event) {
+EventEmitter.prototype.emit = function(event) {
   var i,
     listeners,
     length,
@@ -43,8 +42,8 @@ EventEmitter.prototype.emit = function (event) {
 EventEmitter.prototype.once = function(event, listener) {
   this.on(event, function g() {
     this.off(event, g);
-    listener.apply(this. arguments);
-  })
+    listener.apply(this.arguments);
+  });
 };
 
 // test

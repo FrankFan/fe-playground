@@ -1,13 +1,7 @@
 import chai from 'chai';
 import { describe, it } from 'mocha';
 const expect = chai.expect;
-import {
-  unique,
-  unique2,
-  unique3,
-  intersect,
-  difference,
-} from '../src/utils/arrayUtil';
+import { unique, unique2, unique3, intersect, difference } from '../src/utils/arrayUtil';
 
 import {
   getMaxDuplicate,
@@ -17,29 +11,21 @@ import {
   getRandomStrByNum,
 } from '../src/utils/algorithm';
 
-import {
-  parse,
-  getQueryByName,
-  getQueryByName2,
-  getQueryByName3,
-} from '../src/utils/querystring';
+import { parse, getQueryByName, getQueryByName2, getQueryByName3 } from '../src/utils/querystring';
 
 // variables
 const arrTest = [2, 4, 1, 5, 6, 2, 6, 5, 0];
 const arrTest2 = [7, 6, 2, 0];
 const arrTarget = [0, 1, 2, 4, 5, 6];
 const arrTarget2 = [0, 2, 6];
-const url = 'https://www.baidu.com/s?wd=s&rsv_spt=1&rsv_iqid=0xd6450b3b000d69f0&issp=1&f=3&rsv_bp=0&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=1&rsv_sug3=1&rsv_sug1=1&rsv_sug7=100&rsv_sug2=0&prefixsug=s&rsp=2&inputT=117&rsv_sug4=117';
+const url =
+  'https://www.baidu.com/s?wd=s&rsv_spt=1&rsv_iqid=0xd6450b3b000d69f0&issp=1&f=3&rsv_bp=0&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=1&rsv_sug3=1&rsv_sug1=1&rsv_sug7=100&rsv_sug2=0&prefixsug=s&rsp=2&inputT=117&rsv_sug4=117';
 
 // sort
-import {
-  bubbleSort,
-  quickSort,
-} from '../src/utils/sort';
+import { bubbleSort, quickSort } from '../src/utils/sort';
 
 describe('Array 数组操作', function() {
   describe('1.数组去重', function() {
-
     it('unique1: forEach+includes', () => {
       const result = unique(arrTest).sort();
       expect(result).to.eql(arrTarget); // loose equality .eql
@@ -66,7 +52,7 @@ describe('Array 数组操作', function() {
   describe('3.数组求差集', function() {
     it('difference: filter + includes', () => {
       const result = difference(arrTest, arrTest2).sort();
-      expect(unique3(result)).to.eql([1,4,5]);
+      expect(unique3(result)).to.eql([1, 4, 5]);
     });
   });
 });
@@ -90,15 +76,15 @@ describe('算法题', function() {
 
   describe('3. fibonacci', () => {
     it('N 阶 fibonacci', () => {
-      const target = [ 0, 1, 1, 2, 3, 5, 8, 13, 21, 34 ];
-      const result  = fibonacci(10);
+      const target = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34];
+      const result = fibonacci(10);
       expect(result).to.eql(target);
     });
   });
 
   describe('4. getMaxDiff', () => {
     it('求一个正数组中的最大差值', () => {
-      let arr = [8,9,1,2,1,0,6];
+      let arr = [8, 9, 1, 2, 1, 0, 6];
       const result = getMaxDiff(arr);
       expect(result).to.equal(9);
     });
@@ -111,7 +97,6 @@ describe('算法题', function() {
     });
   });
 });
-
 
 describe('utility', () => {
   describe('1. querystring', () => {
@@ -145,7 +130,7 @@ describe('test sort method', () => {
       const arr = [12, 35, 99, 18, 76];
       const result = bubbleSort(arr);
       expect(result).to.eql([99, 76, 35, 18, 12]);
-    })
+    });
   });
 
   describe('2. quick sort', () => {
@@ -156,6 +141,6 @@ describe('test sort method', () => {
       console.log(result);
 
       expect(result).to.eql([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
-    })
+    });
   });
-})
+});

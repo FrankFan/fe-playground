@@ -4,7 +4,6 @@
  * 能力 = 编程能力 + 工程能力 + 架构能力
  */
 
-
 /**
  * HTML 的一道题
  * 获取页面中DOM元素出现的次数，并进行排序
@@ -26,7 +25,7 @@ function getDomObj() {
  */
 function sortObj(obj) {
   var sortable = [];
-  for(const i in obj) {
+  for (const i in obj) {
     sortable.push([i, domObj[i]]);
   }
   sortable.sort((a, b) => b[1] - a[1]);
@@ -35,7 +34,6 @@ function sortObj(obj) {
 
 var domObj = getDomObj();
 var result = sortObj(domObj);
-
 
 // CSS
 /**
@@ -58,7 +56,6 @@ var result = sortObj(domObj);
  * 4.
  */
 
-
 // JS
 /**
  * 1. 类型
@@ -76,7 +73,6 @@ var result = sortObj(domObj);
  * 11. Event loop
  *
  */
-
 
 /**
  *
@@ -129,7 +125,6 @@ var result = sortObj(domObj);
 // 且这100个元素的背景色不能重复
 
  */
-
 
 /**
  * 前端框架

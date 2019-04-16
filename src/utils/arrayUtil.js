@@ -1,7 +1,7 @@
 export function unique(arr) {
   let uniqueArr = [];
   arr.forEach(item => {
-    if(!uniqueArr.includes(item)) {
+    if (!uniqueArr.includes(item)) {
       uniqueArr.push(item);
     }
   });
@@ -34,7 +34,7 @@ export function intersect(arr1, arr2) {
         result.push(item);
       }
     });
-  })
+  });
   return result;
 }
 
@@ -46,7 +46,7 @@ export function intersect2(arr1, arr2) {
         result.push(item);
       }
     });
-  })
+  });
   return result;
 }
 
@@ -56,19 +56,15 @@ export function difference(arr1, arr2) {
 
 // 数组中最长子序列
 
-
 // 求数组中乘积最大的三个数
 
-
 // webpack插件机制，写一个webpack插件
-
 
 // CDN调优、搭建
 
 // http缓存
 // - 协商缓存
 // - 强缓存
-
 
 // 一次 url request 完整流程
 // - DNS解析
@@ -77,9 +73,5 @@ export function difference(arr1, arr2) {
 // XSS
 // CSRF
 
-
 // node
 // - error first callback
-
-
-

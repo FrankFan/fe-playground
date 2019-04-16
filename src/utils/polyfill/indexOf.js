@@ -3,11 +3,11 @@
 var indexOf;
 
 if (typeof Array.prototype.indexOf === 'function') {
-  indexOf = function (haystack, needle) {
+  indexOf = function(haystack, needle) {
     return haystack.indexOf(needle);
-  }
+  };
 } else {
-  indexOf = function (haystack, needle) {
+  indexOf = function(haystack, needle) {
     var i = 0,
       length = haystack.length,
       idx = -1,
@@ -20,5 +20,5 @@ if (typeof Array.prototype.indexOf === 'function') {
       i++;
     }
     return idx;
-  }
+  };
 }
