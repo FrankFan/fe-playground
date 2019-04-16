@@ -13,14 +13,12 @@ export default class Square extends React.Component {
         <section className="vw">
           <h1>自适应的正方形2: vw vh</h1>
           <div className="content">
-            <div className="box"></div>
-            <div className="box"></div>
-            <div className="box"></div>
+            <div className="box" />
+            <div className="box" />
+            <div className="box" />
           </div>
         </section>
-        <section className="margin">
-          123123
-        </section>
+        <section className="margin">123123</section>
       </div>
     );
   }

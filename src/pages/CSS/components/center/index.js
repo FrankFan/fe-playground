@@ -7,9 +7,7 @@ export default class Center extends React.Component {
       <div className="center-content">
         <h1>Center in CSS</h1>
         <div className="wrap">
-          <div className="center1 absolute-center">
-            1.normal center
-          </div>
+          <div className="center1 absolute-center">1.normal center</div>
         </div>
         <div className="wrap">
           <div className="center2">

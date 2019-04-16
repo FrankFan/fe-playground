@@ -14,13 +14,9 @@ export default class Position extends React.Component {
           <div className="offset2">absolute</div>
         </section>
 
-        <section className="fixed">
-          fixed
-        </section>
+        <section className="fixed">fixed</section>
 
-        <section className="sticky flex-center">
-          sticky,常用语顶部固定导航
-        </section>
+        <section className="sticky flex-center">sticky,常用语顶部固定导航</section>
       </div>
     );
   }

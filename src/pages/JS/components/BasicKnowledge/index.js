@@ -8,27 +8,27 @@ export default class BasicKnowledge extends React.Component {
 
   onClick = () => {
     console.log('test');
-  }
+  };
 
   testKeys = () => {
-    const arr = [1,2,3,4,5];
+    const arr = [1, 2, 3, 4, 5];
     return arr.map((item, index) => {
-      return <li key={index}>{item}</li>
+      return <li key={index}>{item}</li>;
     });
-  }
+  };
 
   testRef = () => {
     return (
       <form onSubmit={this.handleSubmit}>
-        <input type="text" ref={ input => this.input = input } />
+        <input type="text" ref={input => (this.input = input)} />
         <button type="submit">Submit</button>
       </form>
     );
-  }
+  };
 
   handleSubmit = () => {
     console.log(`Input value ${this.input.value}`);
-  }
+  };
 
   render() {
     return (
@@ -37,11 +37,9 @@ export default class BasicKnowledge extends React.Component {
           <h1 onClick={this.onClick}>Test</h1>
         </div>
         <div className="content">
-          <ul>
-            { this.testKeys() }
-          </ul>
+          <ul>{this.testKeys()}</ul>
         </div>
-        { this.testRef() }
+        {this.testRef()}
       </div>
     );
   }

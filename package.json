@@ -9,7 +9,7 @@
     "build": "webpack --mode production --config webpack.config.js",
     "test": "mocha --require @babel/register",
     "deploy": "npm run build && node deploy.js",
-    "prettier": "prettier --write ./src/**/**/**/*",
+    "prettier": "prettier --write ./src/**/*.js",
     "test:watch": "mocha --require @babel/register --watch",
     "test:debug": "mocha --require @babel/register --inspect-brk"
   },

@@ -10,8 +10,8 @@ export default class Center extends React.Component {
           <div className="main">main</div>
         </div>
         <div className="clear-float">
-          <div className="child"></div>
-          <div className="child"></div>
+          <div className="child" />
+          <div className="child" />
         </div>
         <div className="margin-collapse">
           <p>haha</p>

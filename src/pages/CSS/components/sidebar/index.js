@@ -4,49 +4,53 @@ import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
 import './index.scss';
 
-const routesConfig = [{
-  path: 'float',
-  title: 'float',
-},{
-  path: 'position',
-  title: 'position',
-},{
-  path: 'center',
-  title: 'center',
-},{
-  path: 'bfc',
-  title: 'bfc',
-},{
-  path: 'layout',
-  title: 'layout',
-},{
-  path: 'square',
-  title: 'square',
-}];
+const routesConfig = [
+  {
+    path: 'float',
+    title: 'float',
+  },
+  {
+    path: 'position',
+    title: 'position',
+  },
+  {
+    path: 'center',
+    title: 'center',
+  },
+  {
+    path: 'bfc',
+    title: 'bfc',
+  },
+  {
+    path: 'layout',
+    title: 'layout',
+  },
+  {
+    path: 'square',
+    title: 'square',
+  },
+];
 
 class Home extends React.Component {
   static propTypes = {
     match: PropTypes.object.isRequired,
     location: PropTypes.object.isRequired,
-    history: PropTypes.object.isRequired
-  }
+    history: PropTypes.object.isRequired,
+  };
 
   renderLinks() {
     const currentPath = this.props.location.pathname.substr(1);
-    return (<ul>
-      {
-        routesConfig.map(({path, title}, index) =>
+    return (
+      <ul>
+        {routesConfig.map(({ path, title }, index) => (
           <li key={index}>
-            <Link
-              to={`/${path}`}
-              replace={path === currentPath}
-            >
+            <Link to={`/${path}`} replace={path === currentPath}>
               {title}
             </Link>
           </li>
-        )
-      }
-    </ul>);
+        ))}
+      </ul>
+    );
   }
 
   render() {
@@ -58,6 +62,5 @@ class Home extends React.Component {
     );
   }
 }
-
 
 export default withRouter(Home);

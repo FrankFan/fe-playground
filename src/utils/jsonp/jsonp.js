@@ -22,7 +22,7 @@ function createScriptTag(url, funcName) {
   script.onerror = () => {
     removeScript(funcName);
     removeFunc(funcName);
-  }
+  };
 }
 
 function generateJsonpCallback() {
@@ -42,4 +42,3 @@ jsonp('http://localhost:5000', 3000, function(res) {
   const text = document.createTextNode(res.data);
   document.body.appendChild(text);
 });
-
