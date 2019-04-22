@@ -12,7 +12,7 @@
 function removeDuplicates(array) {
   var sorted = array.sort();
   var unique = [];
-  for (i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     if (sorted[i] != sorted[i + 1]) {
       unique.push(array[i]);
     }
