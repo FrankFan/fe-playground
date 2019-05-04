@@ -61,6 +61,7 @@ module.exports = (noting, argv) => {
     },
     output: {
       path: path.resolve(__dirname, 'dist'),
+      // publicPath: isProduction ? 'https://fy98.com/fe-playground/' : '',
       filename: isProduction ? '[name]/[name].bundle.[chunkhash:8].js' : '[name]/[name].bundle.js',
     },
     module: {
