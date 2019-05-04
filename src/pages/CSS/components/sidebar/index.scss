@@ -37,3 +37,16 @@
     animation-name: flipInX;
   }
 }
+
+.sidebar {
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .Link-List {
+    li {
+      padding-left: 20px;
+      line-height: 2;
+    }
+  }
+}

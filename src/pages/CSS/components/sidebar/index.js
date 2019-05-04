@@ -4,32 +4,7 @@ import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
 import './index.scss';
 
-const routesConfig = [
-  {
-    path: 'float',
-    title: 'float',
-  },
-  {
-    path: 'position',
-    title: 'position',
-  },
-  {
-    path: 'center',
-    title: 'center',
-  },
-  {
-    path: 'bfc',
-    title: 'bfc',
-  },
-  {
-    path: 'layout',
-    title: 'layout',
-  },
-  {
-    path: 'square',
-    title: 'square',
-  },
-];
+import routesConfig from '../../routesConfig';
 
 class Home extends React.Component {
   static propTypes = {
@@ -40,11 +15,12 @@ class Home extends React.Component {
 
   renderLinks() {
     const currentPath = this.props.location.pathname.substr(1);
+
     return (
-      <ul>
+      <ul className="Link-List">
         {routesConfig.map(({ path, title }, index) => (
           <li key={index}>
-            <Link to={`/${path}`} replace={path === currentPath}>
+            <Link to={path} replace={path === currentPath}>
               {title}
             </Link>
           </li>
