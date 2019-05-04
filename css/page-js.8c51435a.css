@@ -1,20 +1,20 @@
 
-.basic .question h1 {
+.color .question h1 {
   font-size: 25px;
   color: grey; }
 
-.basic .question .content {
+.color .question .content {
   overflow: hidden;
   border: 1px solid #fcc;
   margin: 20px; }
-  .basic .question .content .box {
+  .color .question .content .box {
     user-select: none;
     width: 100px;
     height: 100px;
     line-height: 100px;
     text-align: center;
     float: left; }
-    .basic .question .content .box:hover {
+    .color .question .content .box:hover {
       transform: scale(1.01, 1.01);
       transition: transform .1s; }
 
@@ -23,10 +23,21 @@
   width: 400px;
   height: 800px; }
 
-html, body, #root {
+html,
+body,
+#root {
   height: 100%; }
 
-body, p, ul, li, h1, h2, h3, h4, h5, h6 {
+body,
+p,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   padding: 0; }
 
