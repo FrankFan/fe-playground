@@ -3,7 +3,6 @@ import { HashRouter } from 'react-router-dom';
 
 import Sidebar from './components/sidebar/';
 import Routes from './router';
-console.log(Routes);
 
 const AppRouter = () => (
   <HashRouter>

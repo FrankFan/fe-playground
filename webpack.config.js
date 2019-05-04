@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const WebpackBar = require('webpackbar');
@@ -33,6 +34,11 @@ module.exports = (noting, argv) => {
       template: `${__dirname}/template.html`,
       chunks: ['page-js', 'common', 'runtime'],
       minify: isProduction ? htmlMinifyConfig : {},
+    }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify(argv.mode),
+      },
     }),
   ];
 
